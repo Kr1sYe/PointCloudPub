@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="point_cloud_file" default="/home/k/gt_real_ws/src/ground_truth/pointcloud/20200520_export_project_cloud20.pcd"/>
+    
+
+    <node pkg="ground_truth" type="PointCloud_Pub_node" name="PointCloud_Pub_node" 
+            args = "$(arg point_cloud_file)" output = "screen" />
+
+    <node pkg="ground_truth" type="ObjPose_Pub_node" name="ObjPose_Pub_node" output = "screen" />
+
+</launch>
